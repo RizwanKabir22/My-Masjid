@@ -161,6 +161,17 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 .cta-divide{margin-left:auto;margin-right:auto}
 .cta-media img{object-position:50% 40%;filter:saturate(.45)}
 .cta-final .cta-note{color:var(--text-2)}
+/* Door features: a quiet inline list, not chips */
+.door-feats{gap:0;align-items:center}
+.door-feats span{background:none;border:0;border-radius:0;box-shadow:none;padding:0;gap:.45rem;font-size:.9rem;font-weight:600}
+.door-feats span:hover{transform:none}
+.door-feats span+span{margin-left:1.1rem;padding-left:1.1rem;border-left:1px solid rgba(16,52,64,.14)}
+.door--warm .door-feats span+span{border-left-color:rgba(120,90,40,.2)}
+@media (max-width:560px){
+  .door-feats{flex-direction:column;align-items:flex-start;gap:.6rem}
+  .door-feats span{font-size:.9rem;padding:0}
+  .door-feats span+span{margin-left:0;padding-left:0;border-left:0}
+}
 .btn-play .play-ic svg.play-ic-dome{width:16px;height:20px;margin:0 0 1px}
 @media (max-width:560px){.cta-final .badge{min-width:12rem;justify-content:center}}
 .cta-scrim{background:radial-gradient(70% 80% at 50% 50%,rgba(243,247,249,.96),rgba(243,247,249,.92) 65%,rgba(243,247,249,.89))}
